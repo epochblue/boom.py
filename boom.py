@@ -10,10 +10,10 @@ import subprocess
 __author__ = 'Bill Israel <bill.israel@gmail.com>'
 __version__ =  '.'.join(map(str, (1, 0, 0)))
 
-DEFAULT_DB = '~/.snippydb'
+DEFAULT_DB = '~/.boomdb'
 
 
-class Snippy(dict):
+class Boom(dict):
     @classmethod
     def open(cls, filepath):
         obj = cls()
@@ -58,7 +58,7 @@ def main():
     parser.add_argument('key', type=str, nargs='?', help='The key to retrieve the value for')
     parser.add_argument('value', type=str, nargs='?', help='The value to set for the key')
     parser.add_argument('-d', '--database', dest='database', default=DEFAULT_DB,
-                        help='File path where snippy database is located')
+                        help='File path where the boom database is located')
     parser.add_argument('--overwrite', action='store_true', default=False,
                         help='Overwrite any existing value for the given key')
     parser.add_argument('--delete', action='store_true', default=False,
@@ -71,7 +71,7 @@ def main():
     update_key = bool(args.key and args.value and args.overwrite)
 
     try:
-        snippets = Snippy.open(os.path.expanduser(args.database))
+        snippets = Boom.open(os.path.expanduser(args.database))
 
         if get_key:
             if Clipboard.copy(snippets.get(args.key)):

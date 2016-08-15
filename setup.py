@@ -1,7 +1,7 @@
 from os import path
 from setuptools import setup
 
-from snippy import __version__
+from boom import __version__
 
 long_description = open(
     path.join(
@@ -11,19 +11,19 @@ long_description = open(
 ).read()
 
 entry_points = {
-    'console_scripts': ['snip = snippy:main']
+    'console_scripts': ['boom = boom:main']
 }
 
 setup(
-    name='snippy',
-    py_modules=['snippy'],
+    name='boompy',
+    py_modules=['boom'],
     entry_points=entry_points,
     version=__version__,
     description="Simple command line snippets.",
     long_description=long_description,
     author='Bill Israel',
     author_email='bill.israel@gmail.com',
-    url='https://github.com/epochblue/snippy',
+    url='https://github.com/epochblue/boom',
     keywords=['clipboard', 'boom', 'copy', 'paste'],
     license='MIT',
     classifiers=[

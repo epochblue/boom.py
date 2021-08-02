@@ -4,7 +4,8 @@ boom.py
 .. image:: https://img.shields.io/pypi/v/boompy.svg
     :target: https://pypi.python.org/pypi/boompy
 
-``boom.py`` is a simple command line utiilty for storing text snippets under simple, memorable key names. It is conceptually similar to `boom`_ by `Zach Holman`_.
+``boom.py`` is a simple command line utiilty for storing text snippets under simple, memorable key names.
+It is conceptually similar to `boom`_ by `Zach Holman`_.
 
 
 Installation
@@ -14,7 +15,7 @@ The easiest way to install `boom.py`_ is via `pip`_:
 
 .. code-block:: console
 
-    pip install boom.py
+    pip install boompy
 
 You can also install it the old-fashioned way, if that's more your speed:
 
@@ -49,21 +50,22 @@ If you attempt to set a value for an existing key, ``boom.py`` will return with 
     $> boom new_key new_value
     Error: Key 'new_key' already exists.
 
-If you'd like to update an existing key, use the ``--overwrite`` flag:
+If you'd like to update an existing key, use the ``--overwrite`` or ``-o`` flag:
 
 .. code-block:: console
 
-    $> boom new_key updated_value --overwrite
+    $> boom --overwrite new_key updated_value
     'new_key' is now 'updated_value'.
 
-And if you'd like to delete a key/value pair, use the ``--delete`` flag.
+And if you'd like to delete a key/value pair, use the ``--delete`` or ``-d`` flag.
 
 .. code-block:: console
 
-    $> boom new_key --delete
+    $> boom --delete new_key
     'new_key' has been removed.
 
-By default, ``boom.py`` stores its "database" in a file located at ``$HOME/.boomdb``. If you'd like to save your snippets to a different location, you can use the ``-d`` or ``--database`` flag:
+By default, ``boom.py`` stores its "database" in a file located at ``$HOME/.config/boom/boomdb``.
+If you'd like to save your snippets to a different location, you can use the ``-db`` or ``--database`` flag:
 
 .. code-block:: console
 

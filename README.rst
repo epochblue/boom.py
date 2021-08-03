@@ -4,8 +4,14 @@ boom.py
 .. image:: https://img.shields.io/pypi/v/boompy.svg
     :target: https://pypi.python.org/pypi/boompy
 
-``boom.py`` is a simple command line utiilty for storing text snippets under simple, memorable key names.
+``boom.py`` is a simple command line utiilty for storing text snippets.
 It is conceptually similar to `boom`_ by `Zach Holman`_.
+
+
+Requirements
+------------
+
+``boom.py`` requires Python 3, but otherwise has no other installation or runtime dependencies.
 
 
 Installation
@@ -23,7 +29,7 @@ You can also install it the old-fashioned way, if that's more your speed:
 
     git clone https://github.com/epochblue/boom.py
     cd boom.py
-    python setup.py install
+    python3 setup.py install
 
 
 Usage
@@ -89,10 +95,12 @@ License
 
 ``boom.py`` is MIT licensed. Please see the included ``LICENSE`` file.
 
-Authors
--------
+
+Author
+------
 
 * Bill Israel - `@epochblue`_ - `http://billisrael.info/`_
+
 
 .. _boom: https://github.com/holman/boom
 .. _Zach Holman: https://zachholman.com
